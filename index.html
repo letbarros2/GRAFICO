@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Produção de gráficos</title>
+
+   
+</head>
+<body>
+    <!--Start Canvas -> Desenhar elementos gráficos usando JS-->
+    <canvas class="line-chart"></canvas>
+
+    <!-- Include Chart JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script>
+        var ctx = document.getElementsByClassName('line-chart');
+
+        // Type, Data e options
+         var chartGraph = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels:["Bárbara","Mikaelly","Letícia", "Amanda", "Heric"],
+                datasets:[
+                    {
+                    label: "ALUNOS",
+                    data: [45, 20, 34, 25, 30],
+                    borderWidth: 6,
+                    borderColor: "rgba(75,192,192,1)",
+                    backgroundColor: "rgba(75,192,192,0.2)", label: "ALUNOS",
+                    data: [45, 20, 34, 25, 30],
+                    borderWidth: 6,
+                    borderColor: "rgba(75,192,192,1)",
+                    backgroundColor: "rgba(75,192,192,0.2)"
+                    },
+                    {
+                    label: "Alunos2",
+                    data: [44, 10, 72, 50, 23],
+                    borderWidth: 6,
+                    borderColor: "rgba(200,200,400,0)", 
+                    backgroundColor: "rgba(75,192,192,0.2)"
+                    
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 20,
+                    text: "Alunos faltosos"
+                },
+                labels:{
+                    fontStyle:'bold'
+                }
+            }
+            
+        });
+
+    </script>
+
+</body>
+</html>
